@@ -1,0 +1,29 @@
+<section>
+   <header>
+      <nav class="navbar navbar-expand-md">
+         <div class="container">
+            <h1 class="fs-2 fw-bold align-middle my-1">Manager PRO</h1>
+
+            <button class="navbar-toggler align-middle" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+               <span class="navbar-toggler-icon">..</span>
+            </button>
+
+            <div class="collapse navbar-collapse align-middle" id="navmenu">
+               <ul class="navbar-nav ms-auto fs-5">
+                  <li class="nav-item">
+                     <a routerLink="/login-page" routerLinkActive="activebutton" class="nav-link text-dark fw-normal mx-4">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a routerLink="dashboard" routerLinkActive="activebutton" class="nav-link text-dark fw-normal mx-4">Dashboard</a>
+                  </li>
+                  <li class="nav-item">
+                     <a routerLink="departments" routerLinkActive="activebutton" class="nav-link text-dark fw-normal mx-4">Departments</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+   </header>
+</section>
+
+<router-outlet></router-outlet>

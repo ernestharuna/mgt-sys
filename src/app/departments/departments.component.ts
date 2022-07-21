@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserBaseService } from '../user-base.service';
+import { Dept } from '../mock-data';
 
 @Component({
   selector: 'app-departments',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DepartmentsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userBase: UserBaseService) { }
+  departments: Dept[] = [];
+
+  getDept(){
+    this.userBase.getDept().subscribe(xyz => this.departments = xyz)
+  }
 
   ngOnInit(): void {
+    this.getDept()
   }
 
 }

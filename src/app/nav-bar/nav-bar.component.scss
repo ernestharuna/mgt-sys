@@ -6,20 +6,23 @@ section {
    margin-top: 0;
    border-radius: 0 0 10px 10px;
    box-shadow: 0 0 30px -10px black;
-} 
+}
 
 .activebutton {
    padding: 7px;
    border-radius: 8px;
    background-color: rgb(158, 158, 158);
-   background: white;
-   box-shadow: 0 0 5px 0px black;
+   background: grey;
 }
 
-li {
-   transition: .3s;
+a {
+   transition: .2s;
+   border-radius: 8px;
+
    &:hover {
       transform: scale(1.1, 1.1);
-      
+      background-color: rgb(158, 158, 158);
+      background: white;
+      box-shadow: 0 0 5px -2px black;
    }
 }

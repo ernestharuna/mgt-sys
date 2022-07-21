@@ -11,9 +11,9 @@
                      All Staff
                   </h3>
                   <p class="card-text">
-                     Total number of staff is <span class="fw-bold"></span>
+                     Total number of staff is <span class="fw-bold">{{ users.length }}</span>
                   </p>
-                  <a class="btn btn-dark">See List</a>
+                  <a (click)="filterAll()" class="btn btn-dark">See List</a>
                </div>
             </div>
          </div>
@@ -27,10 +27,10 @@
                      Active Staff
                   </h3>
                   <p class="card-text">
-                     <span class="fw-bold"></span> out of
-                     <span class="fw-bold"></span> staff are present today.
+                     <span class="fw-bold">{{ activeUsers.length }} </span> out of
+                     <span class="fw-bold">{{ users.length }} </span> staff are present today.
                   </p>
-                  <a class="btn btn-dark">See list</a>
+                  <a (click)="filterActive()" class="btn btn-dark">See list</a>
                </div>
             </div>
          </div>
@@ -44,10 +44,10 @@
                      Inactive Staff
                   </h3>
                   <p class="card-text">
-                     <span class="fw-bold"></span> out of
-                     <span class="fw-bold"></span> staff are not present today.
+                     <span class="fw-bold">{{ inActiveUsers.length }} </span> out of
+                     <span class="fw-bold"> {{ users.length }}</span> staff are not present today.
                   </p>
-                  <a class="btn btn-dark">See list</a>
+                  <a (click)="filterInActive()" class="btn btn-dark">See list</a>
                </div>
             </div>
          </div>
@@ -55,6 +55,40 @@
 
       <hr>
 
-   
+      <div>
+         <div class="container">
+            <div class="row g-4">
+               <div class="col-md">
+                  <div *ngFor="let user of filteredUsers">
+                     <button type="button" (click)="onSelect(user)"
+                        class="btn btn-dark py-2 mb-2 fs-4 d-block w-100 text-start">
+                        {{ user.firstName }} {{ user.lastName }}
+                        <span *ngIf="user.isActive" class="active-badge float-end"></span>
+                     </button>
+                  </div>
+               </div>
+               <div *ngIf="selectedUser" class="col-md">
+                  <div class="col-md">
+                     <h2 class="text-center mb-4">{{ selectedUser.firstName }}'s Info</h2>
+                     <ul class="list-group list-group-flush lead">
+                        <li class="list-group-item">
+                           <span class="fw-bold">First Name:</span> {{ selectedUser.firstName }}.
+                        </li>
+                        <li class="list-group-item">
+                           <span class="fw-bold">Last Name:</span> {{ selectedUser.lastName }}.
+                        </li>
+                        <li class="list-group-item">
+                           <span class="fw-bold">Department:</span> {{ selectedUser.department }}
+                        </li>
+                        <li class="list-group-item">
+                           <span class="fw-bold">Age:</span> {{ selectedUser.age }}
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
    </div>
 </section>

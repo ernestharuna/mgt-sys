@@ -1,8 +1,8 @@
-<section class="p-5">
+<section class="p-5 px-lg-1">
    <div class="container">
       <div class="row text-center g-4">
          <div class="col-md">
-            <div class="card bg-secondary bg-gradient text-light shadow border-3">
+            <div class="card bg-success bg-gradient text-light shadow border-3">
                <div class="card-body text-start">
                   <div class="h1 mb-3">
                      <i class="bi bi-people-fill"></i>
@@ -18,7 +18,7 @@
             </div>
          </div>
          <div class="col-md">
-            <div class="card bg-secondary bg-gradient text-light shadow border-3">
+            <div class="card bg-danger bg-gradient text-light shadow border-3">
                <div class="card-body text-start">
                   <div class="h1 mb-3">
                      <i class="bi bi-person-check-fill"></i>
@@ -59,14 +59,19 @@
          <div class="container">
             <div class="row g-4">
                <div class="col-md">
+                  <div *ngIf="myToggle">
+                     <p class="text-center fs-4 p-5 opacity-75 font-monospace">Welcome to Management PRO!</p>
+                     <p class="text-center fs-4 p-5 opacity-75 font-monospace">Click <b>See List</b>, to display a list here</p>
+                  </div>
                   <div *ngFor="let user of filteredUsers">
                      <button type="button" (click)="onSelect(user)"
                         class="btn btn-dark py-2 mb-2 fs-4 d-block w-100 text-start">
                         {{ user.firstName }} {{ user.lastName }}
-                        <span *ngIf="user.isActive" class="active-badge float-end"></span>
+                        <span *ngIf="user.isActive" class="active-badge float-end align-center"></span>
                      </button>
                   </div>
                </div>
+
                <div *ngIf="selectedUser" class="col-md">
                   <div class="col-md">
                      <h2 class="text-center mb-4">{{ selectedUser.firstName }}'s Info</h2>

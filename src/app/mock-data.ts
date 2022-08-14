@@ -5,9 +5,8 @@ export interface Users {
    age: number,
    isActive: boolean,
 }
-
 export const allUsers: Users[] = [
-   { firstName: 'Johnson', lastName: 'Cole', department: 'Supervisor', age: 45, isActive: false },
+   { firstName: 'Tunde', lastName: 'Samuel', department: 'Supervisor', age: 30, isActive: false },
    { firstName: 'John', lastName: 'Doe', department: 'Supervisor', age: 35, isActive: true },
    { firstName: 'Seun', lastName: 'Mirn', department: 'Developer', age: 42, isActive: false },
    { firstName: 'Usain', lastName: 'Peter', department: 'HR', age: 43, isActive: true },
@@ -18,10 +17,10 @@ export const allUsers: Users[] = [
    { firstName: 'Gabby', lastName: 'Preek', department: 'Cleaner', age: 45, isActive: true },
 ];
 
+
 export interface Dept {
    department: string;
 }
-
 export const dept: Dept[] = [
    { department: 'Supervisors' },
    { department: 'Developers' },

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { UserBaseService } from '../user-base.service';
-import { Dept } from '../mock-data';
+import { UserBaseService } from 'src/app/user-base.service';
+import { CommonModule } from '@angular/common';
+import { Dept } from 'src/app/mock-data';
 
 @Component({
   selector: 'app-departments',
@@ -19,5 +20,4 @@ export class DepartmentsComponent implements OnInit {
   ngOnInit(): void {
     this.getDept()
   }
-
 }

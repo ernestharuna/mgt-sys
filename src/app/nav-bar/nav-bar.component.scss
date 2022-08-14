@@ -1,10 +1,7 @@
-section {
+header {
    margin: 0 auto;
-   width: 80vw;
-   background-color: white;
-   padding: 20px;
+   width: 100%;
    margin-top: 0;
-   border-radius: 0 0 10px 10px;
    box-shadow: 0 0 30px -10px black;
 }
 
@@ -17,12 +14,11 @@ section {
 
 a {
    transition: .2s;
-   border-radius: 8px;
-
+   border-radius: 5px;
    &:hover {
       transform: scale(1.1, 1.1);
       background-color: rgb(158, 158, 158);
-      background: white;
+      color: black;
       box-shadow: 0 0 5px -2px black;
    }
 }

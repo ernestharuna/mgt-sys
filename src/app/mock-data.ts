@@ -19,7 +19,7 @@ export const allUsers: Users[] = [
 
 
 export interface Dept {
-   department: string;
+   department: string,
 }
 export const dept: Dept[] = [
    { department: 'Supervisors' },

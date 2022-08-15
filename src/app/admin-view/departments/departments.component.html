@@ -1,5 +1,5 @@
 <section>
-   <div *ngFor="let dept of departments">
+   <div *ngFor="let dept of department" (click)="showList(dept)" class="m-3">
       <a class="btn btn-secondary bg-gradient p-3 w-100 fs-4 text-start">
          {{ dept.department }}
       </a>

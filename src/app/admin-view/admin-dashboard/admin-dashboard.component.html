@@ -13,7 +13,7 @@
                   <p class="card-text">
                      Total number of staff is <span class="fw-bold">{{ users.length }}</span>
                   </p>
-                  <a (click)="filterAll()" class="btn btn-dark">See List</a>
+                  <a (click)="filterAll()" href="#list" class="btn btn-dark">See List</a>
                </div>
             </div>
          </div>
@@ -59,11 +59,13 @@
          <div class="container">
             <div class="row g-4">
                <div class="col-md">
+                  <!-- Place holder -->
                   <div *ngIf="myToggle">
                      <p class="text-center fs-4 p-5 opacity-75 font-monospace">Welcome to Management PRO!</p>
                      <p class="text-center fs-4 p-5 opacity-75 font-monospace">Click <b>See List</b>, to display a list here</p>
                   </div>
-                  <div *ngFor="let user of filteredUsers">
+
+                  <div *ngFor="let user of filteredUsers" id="list">
                      <button type="button" (click)="onSelect(user)"
                         class="btn btn-dark py-2 mb-2 fs-4 d-block w-100 text-start">
                         {{ user.firstName }} {{ user.lastName }}

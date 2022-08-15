@@ -1,5 +1,5 @@
 <header>
-   <nav class="navbar navbar-expand-md bg-dark navbar-dark py-3">
+   <nav class="navbar navbar-expand-md bg-secondary navbar-dark py-3">
       <div class="container">
          <h1 class="fs-2 fw-bold align-middle my-1 text-light">Manager PRO</h1>
 
@@ -17,9 +17,18 @@
                   <a routerLink="departments" routerLinkActive="activebutton"
                      class="nav-link text-light fw-normal mx-4">Departments</a>
                </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link mx-4">Manage</a>
+                  <div class="dropdown-content">
+                     <a href="#">Employee</a>
+                     <a href="#">Requests</a>
+                     <a href="#">Applications</a>
+                     <a href="#">Departments</a>
+                  </div>
+               </li>
                <li class="nav-item">
                   <a routerLink="/login-page" routerLinkActive="activebutton"
-                     class="nav-link text-light fw-normal mx-4">Edit</a>
+                     class="nav-link text-light fw-normal mx-4">Log Out</a>
                </li>
             </ul>
          </div>
